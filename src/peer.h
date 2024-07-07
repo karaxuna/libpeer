@@ -6,7 +6,6 @@ extern "C" {
 #endif
 
 #include "peer_connection.h"
-#include "peer_signaling.h"
 
 int peer_init();
 

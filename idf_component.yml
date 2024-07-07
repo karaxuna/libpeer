@@ -1,0 +1,7 @@
+repository: git@github.com:karaxuna/libpeer.git
+url: https://github.com/karaxuna/libpeer
+version: 1.0.0
+dependencies:
+  espressif/mdns: "*"
+  idf:
+    version: ">=4.1.0"

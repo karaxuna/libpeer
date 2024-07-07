@@ -1,0 +1,12 @@
+{
+  "name": "libpeer",
+  "version": "1.0.0",
+  "keywords": "esp32, webrtc",
+  "frameworks": "espidf",
+  "platforms": "*",
+  "build": {
+    "includeDir": "./src",
+    "srcDir": "./src",
+    "srcFilter": ["-<*>", "+<driver>", "+<conversions>", "+<sensors>"]
+  }
+}
