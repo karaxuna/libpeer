@@ -128,8 +128,7 @@ static int dtls_srtp_selfsign_cert(DtlsSrtp *dtls_srtp) {
   ret = mbedtls_x509write_crt_pem(&crt, cert_buf, 2*RSA_KEY_LENGTH, mbedtls_ctr_drbg_random, &dtls_srtp->ctr_drbg);
 
   if (ret < 0) {
-
-    LOGE("mbedtls_x509write_crt_pem failed");
+    LOGE("mbedtls_x509write_crt_pem failed, code: %i", ret);
   }
 
   mbedtls_x509_crt_parse(&dtls_srtp->cert, cert_buf, 2*RSA_KEY_LENGTH);
