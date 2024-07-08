@@ -3,8 +3,6 @@
 
 #include <stdint.h>
 #include <endian.h>
-
-#include "peer_connection.h"
 #include "config.h"
 
 #ifdef ESP32
@@ -94,6 +92,22 @@ struct RtpEncoder {
   uint32_t timestamp_increment;
   uint8_t buf[CONFIG_MTU + 128];
 };
+
+typedef enum MediaCodec {
+
+  CODEC_NONE = 0,
+
+  /* Video */
+  CODEC_H264,
+  CODEC_VP8, // not implemented yet 
+  CODEC_MJPEG, // not implemented yet
+
+  /* Audio */
+  CODEC_OPUS, // not implemented yet
+  CODEC_PCMA,
+  CODEC_PCMU,
+
+} MediaCodec;
 
 int rtp_packet_validate(uint8_t *packet, size_t size);
 
